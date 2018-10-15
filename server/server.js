@@ -43,10 +43,10 @@ app.get('/todos/:id', (req, res) => {
       return res.status(404).send(); // if does not exist in DB -> send empty body
     }
 
-    res.send(todo); // if evrth OK -> return the document
+    res.send({todo}); // if evrth OK -> return the document
   }).catch(e => {
     res.status(400).send();
-  } )
+  })
 });
 
 
