@@ -1,3 +1,5 @@
+require('./config/config');
+
 const _ = require('lodash')
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -9,7 +11,7 @@ var {Todo} = require ('./models/todo');
 var {User} = require ('./models/user');
 
 var app = express();
-const port = process.env.PORT || 3000; // if app running on heroku
+const port = process.env.PORT; // if app running on heroku
 
 app.use(bodyParser.json()) //middleware for express
 
